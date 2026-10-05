@@ -1,0 +1,480 @@
+/* =========================================================
+   DECONOVA S&D
+   RESPONSIVE
+   ========================================================= */
+
+
+/* =========================================================
+   TABLETS
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+    .container {
+        width: min(
+            calc(100% - 50px),
+            900px
+        );
+    }
+
+
+    .main-nav {
+        gap: 20px;
+    }
+
+
+    .nav-link {
+        font-size: 12px;
+    }
+
+
+    .nav-button {
+        padding: 10px 13px;
+    }
+
+
+    .intro-grid {
+        grid-template-columns: 150px 1fr;
+
+        gap: 50px;
+    }
+
+
+    .about-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .about-card:nth-child(2) {
+        border-right: 0;
+    }
+
+
+    .about-card:nth-child(1),
+    .about-card:nth-child(2) {
+        border-bottom:
+            1px solid rgba(255,255,255,0.15);
+    }
+
+
+    .contact-grid {
+        gap: 50px;
+    }
+
+
+    .footer-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 45px;
+    }
+
+}
+
+
+/* =========================================================
+   MÓVILES
+   ========================================================= */
+
+@media (max-width: 760px) {
+
+    .container {
+        width: calc(100% - 36px);
+    }
+
+
+    .section {
+        padding: 80px 0;
+    }
+
+
+    /* HEADER */
+
+    .header-container {
+        height: 70px;
+    }
+
+
+    .menu-toggle {
+        display: flex;
+    }
+
+
+    .main-nav {
+        position: absolute;
+
+        top: 70px;
+        left: 0;
+
+        width: 100%;
+
+        padding: 25px 18px 30px;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 0;
+
+        background: var(--black);
+
+        border-top:
+            1px solid rgba(255,255,255,0.1);
+
+        opacity: 0;
+
+        visibility: hidden;
+
+        transform: translateY(-10px);
+
+        transition: var(--transition);
+    }
+
+
+    .main-nav.open {
+        opacity: 1;
+
+        visibility: visible;
+
+        transform: translateY(0);
+    }
+
+
+    .nav-link {
+        padding: 15px 0;
+
+        border-bottom:
+            1px solid rgba(255,255,255,0.08);
+    }
+
+
+    .nav-link::after {
+        display: none;
+    }
+
+
+    .nav-button {
+        margin-top: 20px;
+
+        text-align: center;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        min-height: 760px;
+    }
+
+
+    .hero-content {
+        padding-top: 70px;
+    }
+
+
+    .hero h1 {
+        font-size: clamp(
+            47px,
+            15vw,
+            75px
+        );
+
+        letter-spacing: -1px;
+    }
+
+
+    .hero-description {
+        font-size: 15px;
+    }
+
+
+    .hero-actions {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+
+    .btn {
+        width: 100%;
+    }
+
+
+    .scroll-indicator {
+        display: none;
+    }
+
+
+    /* INTRO */
+
+    .intro-grid {
+        display: block;
+    }
+
+
+    .section-label {
+        margin-bottom: 45px;
+    }
+
+
+    .intro-content h2 {
+        font-size: 45px;
+    }
+
+
+    /* HEADINGS */
+
+    .section-heading {
+        display: block;
+
+        margin-bottom: 45px;
+    }
+
+
+    .heading-description {
+        margin-top: 25px;
+    }
+
+
+    /* ABOUT */
+
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .about-card {
+        min-height: auto;
+
+        padding: 35px 0;
+
+        border-right: 0 !important;
+
+        border-bottom:
+            1px solid rgba(255,255,255,0.15);
+    }
+
+
+    .about-card:last-child {
+        border-bottom: 0;
+    }
+
+
+    .card-number {
+        margin-bottom: 35px;
+    }
+
+
+    .values {
+        margin-top: 60px;
+    }
+
+
+    .values-list {
+        gap: 10px 20px;
+    }
+
+
+    .values-list span {
+        font-size: 20px;
+    }
+
+
+    /* PRODUCTOS */
+
+    .product-card {
+        flex-basis: 82vw;
+    }
+
+
+    .product-image {
+        height: 300px;
+    }
+
+
+    /* CTA */
+
+    .cta {
+        padding: 70px 0;
+    }
+
+
+    .cta-content {
+        display: block;
+    }
+
+
+    .cta h2 {
+        margin-bottom: 35px;
+    }
+
+
+    /* CONTACTO */
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+
+        gap: 60px;
+    }
+
+
+    /* FOOTER */
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+
+        padding: 60px 0;
+    }
+
+}
+
+
+/* =========================================================
+   MÓVILES PEQUEÑOS
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+    .container {
+        width: calc(100% - 28px);
+    }
+
+
+    .hero h1 {
+        font-size: 46px;
+    }
+
+
+    .intro-content h2 {
+        font-size: 39px;
+    }
+
+
+    .section-heading h2 {
+        font-size: 38px;
+    }
+
+
+    .product-card {
+        flex-basis: 88vw;
+    }
+
+
+    .product-image {
+        height: 270px;
+    }
+
+}
+
+/* =========================================================
+   MODAL - RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 760px) {
+
+    .product-modal {
+        padding: 15px;
+    }
+
+
+    .product-modal-content {
+        max-height: 94vh;
+
+        padding: 28px 18px;
+    }
+
+
+    .modal-close {
+        top: 12px;
+        right: 12px;
+
+        width: 40px;
+        height: 40px;
+
+        font-size: 27px;
+    }
+
+
+    .modal-header {
+        display: block;
+
+        padding-right: 45px;
+
+        margin-bottom: 25px;
+    }
+
+
+    .modal-header h2 {
+        font-size: 38px;
+
+        margin-bottom: 20px;
+    }
+
+
+    .modal-description {
+        font-size: 13px;
+    }
+
+
+    .modal-gallery {
+        grid-template-columns: 1fr;
+
+        gap: 12px;
+    }
+
+
+    .modal-gallery-item {
+        aspect-ratio: 4 / 3;
+    }
+
+
+    /*
+       En pantallas táctiles no necesitamos
+       la animación de "hover".
+    */
+
+    .product-view {
+        opacity: 1;
+
+        transform: translateY(0);
+
+        left: 12px;
+        right: 12px;
+        bottom: 12px;
+    }
+
+}
+
+/* =========================================================
+   FORMULARIO - MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .form-group {
+        margin-bottom: 16px;
+    }
+
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 13px 14px;
+
+        font-size: 14px;
+    }
+
+
+    .form-group textarea {
+        min-height: 120px;
+    }
+
+
+    #submitButton {
+        width: 100%;
+    }
+
+}

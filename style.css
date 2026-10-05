@@ -1,0 +1,621 @@
+/* =========================================================
+   DECONOVA S&D
+   Hoja de estilos principal
+   Archivo: css/style.css
+   ========================================================= */
+
+
+/* =========================================================
+   1. VARIABLES GLOBALES
+   ========================================================= */
+
+:root {
+    --color-background: #f4f3f0;
+    --color-card: #ffffff;
+
+    --color-primary: #b48a52;
+    --color-primary-dark: #8f693b;
+    --color-primary-light: #d4b17b;
+
+    --color-text: #202020;
+    --color-text-secondary: #666666;
+    --color-text-light: #888888;
+
+    --color-border: #e8e6e2;
+
+    --color-white: #ffffff;
+    --color-black: #111111;
+
+    --shadow-card:
+        0 15px 45px rgba(0, 0, 0, 0.08);
+
+    --shadow-button:
+        0 8px 20px rgba(180, 138, 82, 0.22);
+
+    --radius-card: 28px;
+    --radius-button: 17px;
+
+    --font-main: "Montserrat", sans-serif;
+}
+
+
+/* =========================================================
+   2. RESET GENERAL
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   3. CONFIGURACIÓN GENERAL DEL DOCUMENTO
+   ========================================================= */
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    min-height: 100vh;
+
+    font-family: var(--font-main);
+
+    background:
+        linear-gradient(
+            180deg,
+            #fafaf9 0%,
+            var(--color-background) 100%
+        );
+
+    color: var(--color-text);
+
+    display: flex;
+    justify-content: center;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+/* =========================================================
+   4. CONTENEDOR PRINCIPAL
+   ========================================================= */
+
+.container {
+    width: 100%;
+    max-width: 430px;
+
+    min-height: 100vh;
+
+    padding: 28px 20px 35px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* =========================================================
+   5. TARJETA PRINCIPAL
+   ========================================================= */
+
+.card {
+    width: 100%;
+
+    background: var(--color-card);
+
+    border: 1px solid rgba(0, 0, 0, 0.035);
+
+    border-radius: var(--radius-card);
+
+    padding: 34px 24px 32px;
+
+    text-align: center;
+
+    box-shadow: var(--shadow-card);
+}
+
+
+/* =========================================================
+   6. LOGO
+   ========================================================= */
+
+.logo {
+    width: 180px;
+    max-width: 75%;
+    height: auto;
+
+    display: block;
+
+    margin: 0 auto;
+
+    object-fit: contain;
+}
+
+
+/* =========================================================
+   7. NOMBRE DE LA EMPRESA
+   ========================================================= */
+
+h1 {
+    margin-top: 20px;
+
+    color: var(--color-text);
+
+    font-size: 29px;
+    font-weight: 600;
+
+    letter-spacing: 4px;
+
+    line-height: 1.2;
+}
+
+
+/* =========================================================
+   8. ESLOGAN
+   ========================================================= */
+
+.slogan {
+    margin-top: 12px;
+
+    color: var(--color-primary-dark);
+
+    font-size: 15px;
+    font-weight: 600;
+
+    line-height: 1.6;
+
+    letter-spacing: 0.2px;
+}
+
+
+/* =========================================================
+   9. LÍNEA DECORATIVA
+   ========================================================= */
+
+.divider {
+    width: 65px;
+    height: 2px;
+
+    margin: 23px auto 21px;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--color-primary),
+            var(--color-primary-light)
+        );
+
+    border-radius: 10px;
+}
+
+
+/* =========================================================
+   10. DESCRIPCIÓN
+   ========================================================= */
+
+.description {
+    max-width: 340px;
+
+    margin: 0 auto 28px;
+
+    color: var(--color-text-secondary);
+
+    font-size: 14px;
+
+    font-weight: 400;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   11. CONTENEDOR DE BOTONES
+   ========================================================= */
+
+.buttons {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 14px;
+}
+
+
+/* =========================================================
+   12. BOTONES PRINCIPALES
+   ========================================================= */
+
+.btn {
+    width: 100%;
+
+    min-height: 58px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 16px 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--color-primary),
+            var(--color-primary-light)
+        );
+
+    color: var(--color-white);
+
+    border: none;
+    border-radius: var(--radius-button);
+
+    text-decoration: none;
+
+    font-family: var(--font-main);
+
+    font-size: 14px;
+    font-weight: 600;
+
+    letter-spacing: 0.2px;
+
+    box-shadow: var(--shadow-button);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        filter 0.2s ease;
+}
+
+
+/* =========================================================
+   13. EFECTO HOVER DE LOS BOTONES
+   ========================================================= */
+
+.btn:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 12px 25px rgba(180, 138, 82, 0.28);
+
+    filter: brightness(1.03);
+}
+
+
+/* =========================================================
+   14. EFECTO AL PRESIONAR
+   ========================================================= */
+
+.btn:active {
+    transform: translateY(0);
+
+    box-shadow:
+        0 5px 12px rgba(180, 138, 82, 0.20);
+}
+
+
+/* =========================================================
+   15. ACCESIBILIDAD - FOCO
+   ========================================================= */
+
+.btn:focus-visible {
+    outline: 3px solid rgba(180, 138, 82, 0.35);
+
+    outline-offset: 3px;
+}
+
+
+/* =========================================================
+   16. FOOTER
+   ========================================================= */
+
+footer {
+    margin-top: 28px;
+
+    padding: 10px 8px 0;
+
+    text-align: center;
+
+    color: var(--color-text-secondary);
+
+    font-size: 12px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   17. TÍTULOS DEL FOOTER
+   ========================================================= */
+
+footer strong {
+    color: var(--color-text);
+
+    font-size: 12px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   REDES SOCIALES - ICONOS
+   ========================================================= */
+
+.social {
+    margin-top: 18px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 18px;
+}
+
+
+/* Enlaces de las redes */
+
+.social a {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--color-primary-dark);
+
+    text-decoration: none;
+
+    border: 1px solid var(--color-border);
+
+    border-radius: 50%;
+
+    background: #ffffff;
+
+    transition:
+        transform 0.2s ease,
+        color 0.2s ease,
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+/* Tamaño de los iconos SVG */
+
+.social svg {
+    width: 21px;
+    height: 21px;
+
+    display: block;
+
+    fill: none;
+
+    stroke: currentColor;
+
+    stroke-width: 1.8;
+
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+
+/* Facebook utiliza relleno */
+
+.social a:nth-child(2) svg {
+    fill: currentColor;
+
+    stroke: none;
+}
+
+
+/* TikTok */
+
+.social a:nth-child(3) svg {
+    fill: currentColor;
+
+    stroke: none;
+}
+
+
+/* Efecto al pasar el mouse */
+
+.social a:hover {
+    color: var(--color-white);
+
+    background: var(--color-primary);
+
+    border-color: var(--color-primary);
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 7px 15px rgba(180, 138, 82, 0.25);
+}
+
+
+/* Efecto al hacer clic */
+
+.social a:active {
+    transform: translateY(0);
+}
+
+
+/* Accesibilidad */
+
+.social a:focus-visible {
+    outline: 3px solid rgba(180, 138, 82, 0.3);
+
+    outline-offset: 3px;
+}
+
+
+/* =========================================================
+   19. SEPARADOR DEL FOOTER
+   ========================================================= */
+
+footer::before {
+    content: "";
+
+    display: block;
+
+    width: 40px;
+    height: 1px;
+
+    margin: 0 auto 20px;
+
+    background: var(--color-border);
+}
+
+
+/* =========================================================
+   20. TABLETS / PANTALLAS MEDIANAS
+   ========================================================= */
+
+@media (min-width: 600px) {
+
+    .container {
+        max-width: 450px;
+
+        padding-top: 45px;
+        padding-bottom: 45px;
+    }
+
+    .card {
+        padding: 40px 30px 36px;
+    }
+
+    .logo {
+        width: 190px;
+    }
+
+    h1 {
+        font-size: 31px;
+    }
+
+    .slogan {
+        font-size: 16px;
+    }
+
+    .description {
+        font-size: 15px;
+    }
+
+    .btn {
+        min-height: 60px;
+
+        font-size: 15px;
+    }
+}
+
+
+/* =========================================================
+   21. CELULARES PEQUEÑOS
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+    .container {
+        padding: 20px 14px 30px;
+    }
+
+    .card {
+        padding: 28px 18px 27px;
+
+        border-radius: 23px;
+    }
+
+    .logo {
+        width: 155px;
+    }
+
+    h1 {
+        margin-top: 16px;
+
+        font-size: 25px;
+
+        letter-spacing: 3px;
+    }
+
+    .slogan {
+        font-size: 14px;
+    }
+
+    .description {
+        margin-bottom: 24px;
+
+        font-size: 13px;
+
+        line-height: 1.6;
+    }
+
+    .buttons {
+        gap: 12px;
+    }
+
+    .btn {
+        min-height: 54px;
+
+        padding: 14px 16px;
+
+        font-size: 13px;
+
+        border-radius: 15px;
+    }
+
+    footer {
+        font-size: 11px;
+    }
+
+    .social a {
+        font-size: 11px;
+    }
+}
+
+
+/* =========================================================
+   22. PANTALLAS MUY GRANDES
+   ========================================================= */
+
+@media (min-width: 1000px) {
+
+    body {
+        padding: 20px 0;
+    }
+
+    .container {
+        min-height: auto;
+
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .card {
+        padding: 42px 32px 38px;
+    }
+}
+
+
+/* =========================================================
+   23. REDUCCIÓN DE MOVIMIENTO
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    .btn,
+    .social a {
+        transition: none;
+    }
+
+    .btn:hover,
+    .social a:hover {
+        transform: none;
+    }
+}

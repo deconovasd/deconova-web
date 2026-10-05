@@ -1,0 +1,39 @@
+/* =====================================================
+       FORMULARIO
+       ===================================================== */
+
+    const contactForm =
+        document.getElementById("contactForm");
+
+    const formMessage =
+        document.getElementById("formMessage");
+
+
+    if (contactForm) {
+
+        contactForm.addEventListener(
+            "submit",
+            (event) => {
+
+                event.preventDefault();
+
+                /*
+                 * POR AHORA EL FORMULARIO ES VISUAL.
+                 * Posteriormente podremos conectarlo
+                 * con WhatsApp, Formspree, Netlify Forms
+                 * o un backend propio.
+                 */
+
+                if (formMessage) {
+
+                    formMessage.textContent =
+                        "Gracias por contactarnos. Pronto nos comunicaremos contigo.";
+
+                }
+
+                contactForm.reset();
+
+            }
+        );
+
+    }
