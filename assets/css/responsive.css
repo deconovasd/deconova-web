@@ -478,3 +478,84 @@
     }
 
 }
+
+/* ----------***************************************************************************************----------- */
+
+/* =========================================================
+   CONTACTO - CORRECCIONES RESPONSIVE
+   ========================================================= */
+
+/* Evita que padding y bordes aumenten el ancho calculado */
+#contactForm,
+#contactForm *,
+.contact-grid > * {
+    box-sizing: border-box;
+}
+
+/* Permite que el formulario se adapte a su columna */
+#contactForm {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+}
+
+/* Campos y controles */
+#contactForm input,
+#contactForm select,
+#contactForm textarea {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+/* Evita que el usuario ensanche el textarea horizontalmente */
+#contactForm textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* El botón no debe superar el ancho del formulario */
+#contactForm button,
+#contactForm #submitButton {
+    max-width: 100%;
+}
+
+/* Las columnas pueden reducirse sin provocar overflow */
+.contact-grid {
+    min-width: 0;
+}
+
+.contact-grid > * {
+    min-width: 0;
+}
+
+/* Evita desbordamientos de mapas incrustados */
+.contact-grid iframe {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    border: 0;
+}
+
+/* Ajustes para móviles */
+@media (max-width: 600px) {
+    #contactForm input,
+    #contactForm select,
+    #contactForm textarea {
+        font-size: 16px;
+        padding: 13px 14px;
+    }
+
+    #contactForm textarea {
+        min-height: 120px;
+    }
+
+    #contactForm button,
+    #contactForm #submitButton {
+        width: 100%;
+    }
+}
